@@ -16,14 +16,16 @@
                 value: 1,
                 selected: false,
                 description: "Description with Facebook",
-                imageSrc: "http://dl.dropbox.com/u/40036711/Images/facebook-icon-32.png"
+                imageSrc: "http://dl.dropbox.com/u/40036711/Images/facebook-icon-32.png",
+                url: "http://www.facebook.com"
             },
             {
                 text: "Twitter",
                 value: 2,
                 selected: false,
                 description: "Description with Twitter",
-                imageSrc: "http://dl.dropbox.com/u/40036711/Images/twitter-icon-32.png"
+                imageSrc: "http://dl.dropbox.com/u/40036711/Images/twitter-icon-32.png",
+                url: "http://www.facebook.com"
             },
             {
                 text: "LinkedIn",
@@ -31,13 +33,15 @@
                 selected: false,
                 description: "Description with LinkedIn",
                 imageSrc: "http://dl.dropbox.com/u/40036711/Images/linkedin-icon-32.png",
+                url: "http://www.facebook.com"
             },
             {
                 text: "Foursquare",
                 value: 4,
                 selected: false,
                 description: "Description with Foursquare",
-                imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png"
+                imageSrc: "http://dl.dropbox.com/u/40036711/Images/foursquare-icon-32.png",
+                url: "http://www.facebook.com"
             }
         ];
 
@@ -52,22 +56,20 @@
             width:300,
             selectText: "Select your preferred social network",
             imagePosition:"right",
+            onSelected: function (data) {
+            window.location = data.selectedData.url;}
             });
-            
-         $(onSelected).click(function(){
-                $("#test")
 
-        });
+
         });
     </script>
 </head>
 
 <body>
 
-<div id="myDropdown">
-</div>
+<div id="myDropdown"></div>
 
-<div id="test"></div>
+
 
 </body>
 </html>
